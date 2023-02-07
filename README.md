@@ -13,14 +13,40 @@
 
 Два рабочих примера:
 
-- Страница с минимальными настройками — [example_min.html](./example_min.html)
-- Страница с максимальными настройками — [example_max.html](./example_max.html)
+- Страница с минимальными настройками — [example_min.html](example_min.html)
+- Страница с максимальными настройками — [example_max.html](example_max.html)
+
+
+## Как установить
+
+1. Установить Python v3.10.
+
+2. Клонировать репозиторий:
+    ```shell
+    git clone https://github.com/Vasdaz/video-player-jslib.git
+    ```
+
+3. Перейти в репозиторий, установить виртуальное окружение и зависимости:
+    ```shell
+    cd ~/ #/video-player-jslib
+    python3 -m venv .venv
+    soirce .venv/bin/activate
+    pip install -r requirements.txt
+    ```
+4. Запустить WEB-сервер:
+    ```shell
+    livereload -t "./*.html"
+    # >>> [I 230207 22:26:04 server:335] Serving on http://127.0.0.1:35729
+    ```
+5. Перейти по адресу указанному при запуске WEB-сервера: `http://127.0.0.1:35729`
+
 
 ## Как подключить
 
 JS код поставляется в виде одного файла `player.js`, который нужно скачать из этого репозитория. Для работы он требует двух библиотек - [jQuery](https://jquery.com/) и [Playable](https://wix.github.io/playable/). Пример подключения в браузере:
 
 ```html
+
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
 <script src="player.js"></script>
@@ -29,6 +55,7 @@ JS код поставляется в виде одного файла `player.j
 Для работы библиотека требует HTML разметки. Вот полный пример с минимальным количеством настроек:
 
 ```html
+
 <div id="player" style="width: 800px; height: 600px;">
     <div class="js-video-container" style="width: 100%; height: 100%"></div>
 </div>
@@ -38,7 +65,7 @@ JS код поставляется в виде одного файла `player.j
 <script src="player.js"></script>
 
 <script type="text/javascript">
-  createPlayer({elementId: 'player'});
+    createPlayer({elementId: 'player'});
 </script>
 ```
 
@@ -92,3 +119,8 @@ JS код поставляется в виде одного файла `player.j
   <div class="js-progress-slider" style="background-color: red;">Прогресс</div>
 </div>
 ```
+
+## Цель проекта
+
+Код написан в образовательных целях на онлайн-курсе для веб-разработчиков [dvmn.org](https://dvmn.org/).
+
