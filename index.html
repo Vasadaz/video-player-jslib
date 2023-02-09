@@ -20,14 +20,20 @@
     }
     .box-button{
       flex-grow: 0;
+      display: flex;
+      flex-direction: row;
       background-color: #000;
     }
     .video-button {
+      flex-grow: 0;
       color: #FFF;
       background-color: transparent;
       border-style: none;
       cursor: pointer;
       padding: 5px;
+    }
+    .space-button {
+      flex-grow: 1;
     }
   </style>
 </head>
@@ -49,10 +55,11 @@
         <i class="fa fa-volume-off fa-2x fa-fw" aria-hidden="true"></i>
       </button>
 
+      <div class="space-button"></div>
+
       <button class="video-button js-fullscreen-button">
         <i class="fa fa-arrows-alt fa-2x fa-fw" aria-hidden="true"></i>
       </button>
-
     </div>
   </div>
 
