@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <title>Video Player</title>
   <style>
     .box-body{
@@ -23,7 +24,7 @@
       align-items: flex-start;
     }
     .box-button{
-      height: 42px;
+      height: 43px;
       flex-grow: 0;
       display: flex;
       align-items: center;
@@ -36,8 +37,29 @@
       background-color: transparent;
       border-style: none;
       cursor: pointer;
-      font-family: 'Roboto 400', sans-serif;
+      font-family: 'Roboto', sans-serif;
       font-size: 1.2em;
+    }
+    .video-time{
+      flex-grow: 0;
+      color: #FFF;
+      background-color: transparent;
+      border-style: none;
+      font-family: 'Roboto', sans-serif;
+      font-size: 1em;
+    }
+    .video-progress{
+      height: 5px;
+      margin: 0 10px;
+      flex-grow: 1;
+      border-style: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .video-progress-slider{
+      height: 100%;
+      margin: 0;
+      background: #FF0000FF;
     }
     .space-button {
       flex-grow: 1;
@@ -62,7 +84,14 @@
         <i class="fa fa-volume-off fa-fw" aria-hidden="true"></i>
       </button>
 
-      <div class="space-button"></div>
+      <div class="video-time js-current-time"></div>
+
+      <div class="video-progress js-progress">
+        <div class="video-progress video-progress-slider js-progress-slider">
+        </div>
+      </div>
+
+      <div class="video-time js-duration"></div>
 
       <button class="video-button js-fullscreen-button">
         <i class="fa fa-expand fa-fw" aria-hidden="true"></i>
