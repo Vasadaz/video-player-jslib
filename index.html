@@ -50,31 +50,44 @@
     }
     .video-progress{
       height: 5px;
-      margin: 0 10px;
+      padding: 10px;
       flex-grow: 1;
       display: flex;
       border-style: none;
+      cursor: pointer;
+
+    }
+    .video-progress-slider{
+      height: 5px;
+      margin: 0;
+      flex-grow: 0;
+      background: #FF0000FF;
       border-radius: 5px;
       cursor: pointer;
     }
-    .video-progress-slider{
-      flex-grow: 0;
-      height: 100%;
-      margin: 0;
-      background: #FF0000FF;
-    }
     .video-progress-dot{
+      height: 5px;
+      width: 5px;
+      margin-left: -3px;
+      flex-grow: 0;
+      border-radius: 50%;
+      transition-duration: 300ms;
+      transition-timing-function: ease-out;
+    }
+    .video-progress:hover .video-progress-dot{
       height: 8px;
       width: 8px;
-      margin: -4px;
+      margin: -4px -8px;
       flex-grow: 0;
       background-color: #FF0000FF;
       border-style: solid;
       border-color: #FFF;
       border-width: 3px;
       border-radius: 50%;
+      box-shadow: 0 0 2px rgba(0,0,0,1);
+      transition-duration: 300ms;
+      transition-timing-function: ease-in;
     }
-
     .video-progress-space{
       flex-grow: 1;
     }
@@ -101,12 +114,9 @@
       <div class="video-time js-current-time"></div>
 
       <div class="video-progress js-progress">
-        <div class="video-progress video-progress-slider js-progress-slider"></div>
+        <div class="video-progress-slider js-progress-slider"></div>
         <div class="video-progress-dot"></div>
         <div class="video-progress-space"></div>
-
-
-
       </div>
 
       <div class="video-time js-duration"></div>
