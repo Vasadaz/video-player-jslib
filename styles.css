@@ -21,14 +21,20 @@
   flex-direction: row;
   background-color: #000;
 }
+.box-video-progress{
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
 .video-button {
+  height: 35px;
   flex-grow: 0;
   color: #FFF;
   background-color: transparent;
   border-style: none;
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
-  font-size: 1.2em;
+  font-size: 20px;
 }
 .video-time{
   flex-grow: 0;
@@ -36,16 +42,16 @@
   background-color: transparent;
   border-style: none;
   font-family: 'Roboto', sans-serif;
-  font-size: 1em;
+  font-size: 16px;
 }
 .video-progress{
   height: 5px;
   padding: 10px;
   flex-grow: 1;
   display: flex;
+  align-items: center;
   border-style: none;
   cursor: pointer;
-
 }
 .video-progress-slider{
   height: 5px;
@@ -79,5 +85,5 @@
   transition-timing-function: ease-in;
 }
 .video-progress-space{
-  flex-grow: 1;
+  flex-grow: 0;
 }
