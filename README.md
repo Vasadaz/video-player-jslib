@@ -28,7 +28,7 @@
 
 2. Клонировать репозиторий:
     ```shell
-    git clone https://github.com/Vasdaz/video-player-jslib.git
+    git clone https://github.com/vasadaz/video-player-jslib.git
     ```
 
 3. Перейти в репозиторий, установить виртуальное окружение и зависимости:
